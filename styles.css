@@ -1,0 +1,187 @@
+/* Establecer un fondo de color gris o negro */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Fondo por defecto para el cuerpo */
+}
+
+/* Estilo de la institución */
+.institucion {
+  background: linear-gradient(135deg, #333333, #777777); /* Fondo gris a negro */
+  color: white;
+  padding: 0px 0;
+  text-align: center;
+  width: 100%; /* Asegura que el fondo cubra todo el ancho de la pantalla */
+}
+
+/* Para las letras que componen el nombre */
+.letra {
+  font-size: 40px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 2px;
+  opacity: 0; /* Inicialmente invisible */
+  animation: wave 1s ease-in-out infinite; /* Aplicar la animación */
+}
+
+.espacio {
+  display: inline-block;
+  width: 15px; /* Espacio entre cada grupo de letras */
+}
+
+/* Animación de "olas" */
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Estilo del contenedor de las secciones */
+.seccion {
+  width: 930px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+/* Estilo de la estructura de contenido */
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Estilo de las imágenes */
+.imagenes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.imagenes img {
+  width: 100%;
+  max-width: 250px; /* Controla el tamaño de las imágenes */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilo del texto */
+.texto h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.texto p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Ajustes específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  .contenido {
+      flex-direction: column; /* Apilar contenido en dispositivos móviles */
+      align-items: center;
+  }
+
+  .imagenes {
+      flex-direction: column; /* Apilar imágenes en móviles */
+      align-items: center;
+  }
+
+  .imagenes img {
+      width: 100%; /* Las imágenes ocupan el 100% en pantallas pequeñas */
+      margin-bottom: 20px;
+  }
+
+  .texto h3 {
+      font-size: 20px;
+  }
+
+  .texto p {
+      font-size: 14px;
+  }
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Estilos para la navegación */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: #333;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ffd700; /* Color dorado en el hover */
+}
+/* Centrar contenido de todas las secciones */
+section {
+  text-align: center; /* Centra el texto dentro de la sección */
+  margin: 0 auto; /* Asegura que la sección se centre en la página */
+  padding: 20px; /* Espacio dentro de las secciones */
+}
+
+/* Asegura que las imágenes dentro de las secciones se centren también */
+section .imagenes {
+  display: flex;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  gap: 10px; /* Espacio entre las imágenes */
+}
+
+section .imagenes img {
+  max-width: 100%; /* Asegura que las imágenes no sobrepasen el tamaño de su contenedor */
+  height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+/* Opcional: Centrar el contenido de texto dentro de la sección */
+section .texto {
+  margin: 0 auto;
+  max-width: 800px; /* Ajusta el ancho máximo para que el texto no sea muy largo */
+}
+
